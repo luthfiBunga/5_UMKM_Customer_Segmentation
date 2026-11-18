@@ -1,0 +1,48 @@
+{
+    "model_name": "UMKM Customer Segmentation",
+    "algorithm": "KMeans",
+    "n_clusters": 4,
+    "features": [
+        "umur",
+        "jumlah_transaksi_6bln",
+        "total_belanja_rp",
+        "hari_sejak_transaksi_terakhir",
+        "persen_pakai_promo",
+        "rating_rata",
+        "kecamatan",
+        "channel_utama",
+        "metode_bayar",
+        "kategori_favorit"
+    ],
+    "numeric_features": [
+        "umur",
+        "jumlah_transaksi_6bln",
+        "total_belanja_rp",
+        "hari_sejak_transaksi_terakhir",
+        "persen_pakai_promo",
+        "rating_rata"
+    ],
+    "categorical_features": [
+        "kecamatan",
+        "channel_utama",
+        "metode_bayar",
+        "kategori_favorit"
+    ],
+    "cluster_names": {
+        "0": "Pelanggan Loyal dan Aktif",
+        "1": "Pelanggan Tidak Aktif",
+        "2": "Pelanggan Sensitif terhadap Promo",
+        "3": "Pelanggan Bernilai Belanja Tinggi"
+    },
+    "silhouette_score": 0.24992555043693437,
+    "n_samples": 10000,
+    "preprocessing": {
+        "numeric_imputation": "median",
+        "numeric_scaling": "standard",
+        "categorical_imputation": "most_frequent",
+        "categorical_encoding": "one_hot"
+    },
+    "random_state": 42,
+    "n_init": 10,
+    "sklearn_version": "1.9.1"
+}
